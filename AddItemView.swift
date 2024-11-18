@@ -12,15 +12,39 @@ struct AddBarcodeView: View {
     
     var body: some View {
         Form {
-            TextField("Label", text: $label)
-            TextField("Data", text: $data)
-            Picker("Type", selection: $selectedType) {
-                ForEach(codeTypes, id: \.self) { type in
-                    Text(type)
+            Section {
+                HStack {
+                    Text("Label")
+                        .padding(.leading)
+                    TextField("", text: $label)
+                        #if os(macOS)
+                        .frame(width: 300)
+                        #endif
                 }
+                .padding(.top)
+                
+                HStack {
+                    Text("Data")
+                        .padding(.leading)
+                    TextField("", text: $data)
+                        #if os(macOS)
+                        .frame(width: 300)
+                        #endif
+                }
+                
+                Picker("Type", selection: $selectedType) {
+                    ForEach(codeTypes, id: \.self) { type in
+                        Text(type)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .padding(.vertical, 8)
+                .padding(.trailing)
             }
-            .pickerStyle(.segmented)
         }
+        #if os(macOS)
+        .frame(width: 450)
+        #endif
         .navigationTitle("Add Card")
         .toolbar {
             Button("Cancel") {

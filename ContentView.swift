@@ -4,6 +4,7 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    @State private var showingAddSheet = false
 
     var body: some View {
         NavigationSplitView {
@@ -27,12 +28,13 @@ struct ContentView: View {
                 }
 #endif
                 ToolbarItem {
-                    NavigationLink {
-                        AddBarcodeView()
-                    } label: {
+                    Button(action: { showingAddSheet.toggle() }) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $showingAddSheet) {
+                AddBarcodeView()
             }
         } detail: {
             Text("Select an item")
