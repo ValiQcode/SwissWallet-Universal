@@ -51,14 +51,18 @@ struct AddBarcodeView: View {
                 dismiss()
             }
             Button("Save") {
-                addBarcode()
-                dismiss()
+                addItem()
             }
         }
     }
     
-    private func addBarcode() {
-        let newItem = Item(label: label, data: data, type: selectedType == "Barcode" ? "EAN13" : "QR Code")
+    private func addItem() {
+        let newItem = Item(
+            label: label,
+            data: data,
+            type: selectedType == "Barcode" ? "EAN13" : "QR Code"
+        )
         modelContext.insert(newItem)
+        dismiss()
     }
 } 
