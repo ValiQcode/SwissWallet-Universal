@@ -27,7 +27,9 @@ struct ContentView: View {
                 }
 #endif
                 ToolbarItem {
-                    Button(action: addItem) {
+                    NavigationLink {
+                        AddBarcodeView()
+                    } label: {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
@@ -39,7 +41,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Item(label: "", data: "", type: "EAN13")
             modelContext.insert(newItem)
         }
     }

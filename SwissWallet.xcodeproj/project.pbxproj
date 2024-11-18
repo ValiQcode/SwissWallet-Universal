@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541F38B12CEB44D200086AC2 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541F38B02CEB44D200086AC2 /* AddItemView.swift */; };
 		54FF98E32CEB36FB003A3E50 /* SwissWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF98E22CEB36FB003A3E50 /* SwissWalletApp.swift */; };
 		54FF98E52CEB36FB003A3E50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF98E42CEB36FB003A3E50 /* ContentView.swift */; };
 		54FF98E72CEB36FB003A3E50 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF98E62CEB36FB003A3E50 /* Item.swift */; };
@@ -14,7 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54B2EB6F2CEB38330088842A /* SwissWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwissWallet.app; path = /Users/bquast/SwissWallet/build/Debug/SwissWallet.app; sourceTree = "<absolute>"; };
+		541F38AD2CEB42AD00086AC2 /* SwissWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwissWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		541F38B02CEB44D200086AC2 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		54FF98E22CEB36FB003A3E50 /* SwissWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissWalletApp.swift; sourceTree = "<group>"; };
 		54FF98E42CEB36FB003A3E50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54FF98E62CEB36FB003A3E50 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -47,11 +49,13 @@
 			children = (
 				54FF98E82CEB36FC003A3E50 /* Assets.xcassets */,
 				54FF98E42CEB36FB003A3E50 /* ContentView.swift */,
+				541F38B02CEB44D200086AC2 /* AddItemView.swift */,
 				54FF98EE2CEB36FC003A3E50 /* Info.plist */,
 				54FF98E62CEB36FB003A3E50 /* Item.swift */,
 				54FF98EA2CEB36FC003A3E50 /* SwissWallet.entitlements */,
 				54FF98E22CEB36FB003A3E50 /* SwissWalletApp.swift */,
 				54FF98F62CEB370B003A3E50 /* Preview Content */,
+				541F38AD2CEB42AD00086AC2 /* SwissWallet.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +81,7 @@
 			packageProductDependencies = (
 			);
 			productName = SwissWallet;
-			productReference = 54B2EB6F2CEB38330088842A /* SwissWallet.app */;
+			productReference = 541F38AD2CEB42AD00086AC2 /* SwissWallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,6 +137,7 @@
 				54FF98E52CEB36FB003A3E50 /* ContentView.swift in Sources */,
 				54FF98E72CEB36FB003A3E50 /* Item.swift in Sources */,
 				54FF98E32CEB36FB003A3E50 /* SwissWalletApp.swift in Sources */,
+				541F38B12CEB44D200086AC2 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
